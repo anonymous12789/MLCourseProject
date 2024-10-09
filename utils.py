@@ -3,12 +3,12 @@ import pickle
 def save_model(
     cls_model_path:str ='cls_model.pkl' , 
     pca_model_path:str ='pca_model.pkl' ,
-    svm:object = None,
+    model:object = None,
     pca:object = None
 ):
     # save
     with open(cls_model_path,'wb') as f:
-        pickle.dump(svm,f)
+        pickle.dump(model,f)
 
     with open(pca_model_path,'wb') as f:
         pickle.dump(pca,f)
